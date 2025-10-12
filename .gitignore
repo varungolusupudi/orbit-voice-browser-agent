@@ -1,0 +1,63 @@
+# Node modules
+node_modules/
+frontend/node_modules/
+worker/node_modules/
+
+# Python
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+backend/.Python
+backend/venv/
+backend/env/
+backend/.venv/
+*.egg-info/
+.pytest_cache/
+
+# Build outputs
+frontend/dist/
+frontend/build/
+worker/dist/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+worker/.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Static files
+backend/static/*.mp3
+backend/static/*.wav
+backend/static/*.png
+backend/static/*.jpg
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc
+.cache/
+coverage/
+.temp/
+temp/
+
