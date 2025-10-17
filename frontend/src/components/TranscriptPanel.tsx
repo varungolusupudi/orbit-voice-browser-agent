@@ -1,6 +1,18 @@
 // frontend/src/components/TranscriptPanel.tsx
+import { useState, useRef } from "react";
 
 function TranscriptPanel() {
+    const [recording, setRecording] = useState(false);
+
+    const options = {mimeType: "audio/webm;codecs=opus"};
+    const recorderRef = useRef<MediaRecorder | null>(null);
+    const streamRef = useRef<MediaStream | null>(null);
+
+    const handleClick = () => {
+        // TODO MeddiaStream and recorderRef
+    }
+
+
     return (
       <div className="flex flex-col bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-slate-700/50 h-full hover:shadow-purple-500/10 transition-all duration-300">
         {/* Header */}
@@ -69,7 +81,7 @@ function TranscriptPanel() {
         <div className="border-t border-slate-700/50 pt-4">
           {/* Control Buttons */}
           <div className="flex gap-2">
-            <button className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 px-4 rounded-xl font-semibold shadow-lg hover:shadow-purple-500/50 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2">
+            <button onClick={handleClick} className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 px-4 rounded-xl font-semibold shadow-lg hover:shadow-purple-500/50 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
               </svg>
@@ -84,7 +96,7 @@ function TranscriptPanel() {
           </div>
         </div>
       </div>
-    )
-  }
-  export default TranscriptPanel;
+    );
+}
+export default TranscriptPanel;
   
